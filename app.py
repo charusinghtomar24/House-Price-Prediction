@@ -35,7 +35,7 @@ def ml_model(X,y):
   model.fit(X,y)
   return model
 
-model=mi_model(scaled_X,y)
+model=ml_model(scaled_X,y)
 house_price=model.predict(user_X)[0]
 
 final_price = (roundhouse_price * 1000000,2)
@@ -47,6 +47,7 @@ with st.spinner('Predicting House Price'):
 st.success(f'Estimated House Price is : $ {final_price}')
 st.markdown('''**Design and Developed by : Charu Singh Tomar**''')
   
+
 
 
 
